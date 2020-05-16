@@ -27,6 +27,11 @@ vnoremap k gk
 nnoremap <leader>v <C-W><C-V><C-W><C-L>
 nnoremap <leader>q <C-W><C-Q>
 
+nnoremap <leader>cn :cnext<CR>
+nnoremap <leader>cp :cprev<CR>
+nnoremap <leader>cq :cclose<CR>
+nnoremap <leader>cw :cwindow<CR>
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sleuth'

@@ -5,6 +5,9 @@ set nohlsearch
 set smartcase
 set ignorecase
 
+set autoread
+au BufEnter * checktime
+
 set listchars=tab:>-,trail:·,extends:>,precedes:<
 set list
 set mouse=a

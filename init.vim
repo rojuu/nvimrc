@@ -26,7 +26,6 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-nnoremap <leader>s :w<CR>
 nnoremap <leader>v <C-W><C-V><C-W><C-L>
 nnoremap <leader>q <C-W><C-Q>
 
@@ -64,7 +63,8 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> <leader>p <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>n <Plug>(coc-diagnostic-next)
 
-nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>o :CocList outline<cr>
+nnoremap <silent> <leader>s :CocList symbols<CR>
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()

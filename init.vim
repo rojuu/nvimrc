@@ -99,3 +99,5 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
 endif
+
+nnoremap <leader>rs :Rg <C-R><C-W>

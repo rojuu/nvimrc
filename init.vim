@@ -48,6 +48,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/jsonc.vim'
 Plug 'liuchengxu/vim-which-key'
+Plug 'vim-airline/vim-airline'
 
 Plug 'morhetz/gruvbox'
 call plug#end()

@@ -39,6 +39,8 @@ nnoremap <leader>cw :cwindow<CR>
 
 nnoremap <leader>t <C-]>
 
+nnoremap <leader>th :set hlsearch!<CR>
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sleuth'

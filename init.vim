@@ -43,9 +43,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/jsonc.vim'
+Plug 'liuchengxu/vim-which-key'
 
 Plug 'morhetz/gruvbox'
 call plug#end()
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 

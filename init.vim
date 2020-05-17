@@ -24,6 +24,7 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+nnoremap <leader>s :w<CR>
 nnoremap <leader>v <C-W><C-V><C-W><C-L>
 nnoremap <leader>q <C-W><C-Q>
 

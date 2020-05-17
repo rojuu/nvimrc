@@ -71,6 +71,8 @@ nmap <silent> <leader>n <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>o :CocList outline<cr>
 nnoremap <silent> <leader>s :CocList symbols<CR>
 
+nnoremap <silent> <leader>so :CocCommand clangd.switchSourceHeader<CR>
+
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

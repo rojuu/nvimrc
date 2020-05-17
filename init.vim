@@ -2,6 +2,8 @@ let mapleader=" "
 
 set noswapfile
 set nohlsearch
+set smartcase
+set ignorecase
 
 set listchars=tab:>-,trail:·,extends:>,precedes:<
 set list

@@ -33,6 +33,8 @@ nnoremap <leader>cp :cprev<CR>
 nnoremap <leader>cq :cclose<CR>
 nnoremap <leader>cw :cwindow<CR>
 
+nnoremap <leader>t <C-]>
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sleuth'
@@ -52,12 +54,17 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" nnoremap <leader>d <Plug>(coc-definition)
-" nnoremap <leader>i <Plug>(coc-implementation)
-" nnoremap <leader>r <Plug>(coc-references)
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
-" xnoremap <leader>f  <Plug>(coc-format-selected)
-" nnoremap <leader>f  <Plug>(coc-format-selected)
+" <cr> to accept completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" <cr> to accept first completion if nothing selected
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+" tab and s-tab to move in completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'

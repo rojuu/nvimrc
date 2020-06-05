@@ -8,7 +8,7 @@ set ignorecase
 set autoread
 au BufEnter * checktime
 
-set listchars=tab:>-,trail:·,extends:>,precedes:<
+set listchars=tab:>-,space:·,trail:·,extends:>,precedes:<
 set list
 set mouse=a
 set showbreak=\\

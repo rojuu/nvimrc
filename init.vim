@@ -41,7 +41,7 @@ nnoremap <leader>t <C-]>
 
 nnoremap <leader>th :set hlsearch!<CR>
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.config/vim/plugged')
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-fugitive'

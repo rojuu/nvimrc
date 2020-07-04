@@ -13,10 +13,12 @@ set list
 set mouse=a
 set showbreak=\\
 
-" remove useless guis in gvim
-set guioptions-=m  "menu bar
-set guioptions-=T  "toolbar
-set guioptions-=r  "scrollbar
+if has("gui_running")
+    " remove useless guis in gvim
+    set guioptions-=m  "menu bar
+    set guioptions-=T  "toolbar
+    set guioptions-=r  "scrollbar
+endif
 
 augroup filetypedetect
     au BufRead,BufNewFile *.json set filetype=jsonc

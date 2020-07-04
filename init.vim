@@ -52,6 +52,7 @@ Plug 'neoclide/jsonc.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
+Plug 'ziglang/zig.vim'
 
 Plug 'morhetz/gruvbox'
 call plug#end()

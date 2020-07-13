@@ -36,6 +36,9 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+" no need to rebind esc to caps, this is a more portable solution
+inoremap jj <ESC>
+
 nnoremap <leader>v <C-W><C-V><C-W><C-L>
 nnoremap <leader>q <C-W><C-Q>
 

@@ -17,7 +17,9 @@ if has("gui_running")
     " remove useless guis in gvim
     set guioptions-=m  "menu bar
     set guioptions-=T  "toolbar
-    set guioptions-=r  "scrollbar
+
+    set guioptions-=r  "remove right scroll bar
+    set guioptions-=L  "remove left scroll bar
 endif
 
 augroup filetypedetect

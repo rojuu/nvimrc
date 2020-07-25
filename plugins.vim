@@ -17,6 +17,10 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'rhysd/vim-clang-format'
 
   Plug 'morhetz/gruvbox'
+  Plug 'jnurmine/Zenburn'
+  Plug 'sjl/badwolf'
+  Plug 'nanotech/jellybeans.vim'
+  Plug 'jacoborus/tender.vim'
 call plug#end()
 
 " clang-format binds

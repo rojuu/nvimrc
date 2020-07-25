@@ -9,6 +9,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'liuchengxu/vim-which-key'
   Plug 'vim-airline/vim-airline'
   Plug 'bounceme/dim-jump'
+  Plug 'easymotion/vim-easymotion'
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'

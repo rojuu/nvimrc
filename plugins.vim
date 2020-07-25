@@ -8,7 +8,6 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'jremmen/vim-ripgrep'
   Plug 'liuchengxu/vim-which-key'
   Plug 'vim-airline/vim-airline'
-  Plug 'jiangmiao/auto-pairs'
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'

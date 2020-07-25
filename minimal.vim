@@ -46,4 +46,5 @@ nnoremap <leader>cw :cwindow<CR>
 nnoremap <leader>t <C-]>
 
 nnoremap <leader>th :set hlsearch!<CR>
+nnoremap <leader>tn :set number!<CR>
 

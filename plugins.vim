@@ -8,6 +8,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'jremmen/vim-ripgrep'
   Plug 'liuchengxu/vim-which-key'
   Plug 'vim-airline/vim-airline'
+  Plug 'bounceme/dim-jump'
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
@@ -31,7 +32,9 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
+    let b:preferred_searcher = 'rg'
 endif
 
-nnoremap <leader>rs :Rg <C-R><C-W>
+nnoremap <leader>d :DimJumpPos<CR>
+nnoremap <leader>s :Rg <C-R><C-W><CR>
 

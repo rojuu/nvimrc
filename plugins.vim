@@ -5,7 +5,6 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
-  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'jremmen/vim-ripgrep'
   Plug 'liuchengxu/vim-which-key'
   Plug 'vim-airline/vim-airline'
@@ -37,13 +36,11 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>f :ClangFormat<CR>
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 if executable('rg')
-    let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
+    " let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
     let b:preferred_searcher = 'rg'
 endif
 
-if executable('fzf')
-    nnoremap <C-P> :Files<CR>
-endif
+nnoremap <C-P> :Files<CR>
 
 nnoremap <leader>d :DimJumpPos<CR>
 nnoremap <leader>s :Rg <C-R><C-W><CR>

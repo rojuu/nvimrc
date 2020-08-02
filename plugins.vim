@@ -13,6 +13,9 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'easymotion/vim-easymotion'
   Plug 'mg979/vim-visual-multi'
 
+  Plug 'junegunn/fzf'
+  Plug 'junegunn/fzf.vim'
+
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
   Plug 'octol/vim-cpp-enhanced-highlight'
@@ -36,6 +39,10 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
     let b:preferred_searcher = 'rg'
+endif
+
+if executable('fzf')
+    nnoremap <C-P> :Files<CR>
 endif
 
 nnoremap <leader>d :DimJumpPos<CR>

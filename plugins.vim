@@ -11,6 +11,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'bounceme/dim-jump'
   Plug 'easymotion/vim-easymotion'
+  Plug 'mg979/vim-visual-multi'
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'

@@ -42,6 +42,8 @@ nnoremap <leader>cp :cprev<CR>
 nnoremap <leader>cq :cclose<CR>
 nnoremap <leader>cw :cwindow<CR>
 
+nnoremap <leader>s :w<CR>
+
 " C-] is quite hard to use on nordic kb layout, so rebind that
 nnoremap <leader>t <C-]>
 

@@ -48,3 +48,8 @@ nnoremap <leader>t <C-]>
 nnoremap <leader>th :set hlsearch!<CR>
 nnoremap <leader>tn :set number!<CR>
 
+" yank current file full path to system clipboard
+nnoremap <leader>yf :let @+ = expand("%:p")<CR>
+" yank current file relative path to system clipboard
+nnoremap <leader>yr :let @+ = expand("%")<CR>
+

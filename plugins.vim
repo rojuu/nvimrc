@@ -11,6 +11,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'bounceme/dim-jump'
   Plug 'easymotion/vim-easymotion'
   Plug 'mg979/vim-visual-multi'
+  Plug 'pseewald/anyfold'
 
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
@@ -34,6 +35,9 @@ autocmd FileType c,cpp,objc nnoremap <buffer><Leader>f :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>f :ClangFormat<CR>
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+autocmd Filetype * AnyFoldActivate
+set foldlevel=99 " Open all folds
 
 if executable('rg')
     " let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'

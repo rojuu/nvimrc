@@ -18,7 +18,6 @@ call plug#begin('~/.config/vim/plugged')
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
-  Plug 'octol/vim-cpp-enhanced-highlight'
   Plug 'plasticboy/vim-markdown'
 
   Plug 'rhysd/vim-clang-format'

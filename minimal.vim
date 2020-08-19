@@ -6,8 +6,10 @@ set nohlsearch
 set smartcase
 set ignorecase
 
+" reloading buffer when changes done
 set autoread
-au BufEnter * checktime
+" Reload when focus regained (incase someone from outside changed the file)
+au FocusGained,BufEnter * checktime
 
 set listchars=tab:>-,trail:·,extends:>,precedes:<
 set list
@@ -54,4 +56,6 @@ nnoremap <leader>tn :set number!<CR>
 nnoremap <leader>yf :let @+ = expand("%:p")<CR>
 " yank current file relative path to system clipboard
 nnoremap <leader>yr :let @+ = expand("%")<CR>
+
+nnoremap - :Explore<CR>
 

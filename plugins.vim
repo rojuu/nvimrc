@@ -6,9 +6,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jremmen/vim-ripgrep'
   Plug 'liuchengxu/vim-which-key'
-  Plug 'vim-airline/vim-airline'
   Plug 'mg979/vim-visual-multi'
-  Plug 'pseewald/anyfold'
   Plug 'kien/ctrlp.vim'
 
   Plug 'neoclide/jsonc.vim'
@@ -18,8 +16,6 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'rhysd/vim-clang-format'
 
   Plug 'morhetz/gruvbox'
-  Plug 'jnurmine/Zenburn'
-  Plug 'sjl/badwolf'
   Plug 'nanotech/jellybeans.vim'
   Plug 'jacoborus/tender.vim'
 call plug#end()
@@ -30,7 +26,6 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>f :ClangFormat<CR>
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
-autocmd Filetype * AnyFoldActivate
 set foldlevel=99 " Open all folds
 
 if executable('rg')

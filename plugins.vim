@@ -6,7 +6,6 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jremmen/vim-ripgrep'
   Plug 'liuchengxu/vim-which-key'
-  Plug 'mg979/vim-visual-multi'
   Plug 'kien/ctrlp.vim'
 
   Plug 'neoclide/jsonc.vim'

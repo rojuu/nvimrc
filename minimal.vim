@@ -9,11 +9,11 @@ set ignorecase
 " reloading buffer when changes done
 set autoread
 " Reload when focus regained (incase someone from outside changed the file)
+" FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
 
 set listchars=tab:>-,trail:·,extends:>,precedes:<
 set list
-set mouse=a
 set showbreak=\\
 
 augroup filetypedetect
@@ -56,6 +56,4 @@ nnoremap <leader>tn :set number!<CR>
 nnoremap <leader>yf :let @+ = expand("%:p")<CR>
 " yank current file relative path to system clipboard
 nnoremap <leader>yr :let @+ = expand("%")<CR>
-
-nnoremap - :Explore<CR>
 

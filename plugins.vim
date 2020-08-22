@@ -4,6 +4,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-vinegar'
   Plug 'jremmen/vim-ripgrep'
   Plug 'liuchengxu/vim-which-key'
   Plug 'kien/ctrlp.vim'

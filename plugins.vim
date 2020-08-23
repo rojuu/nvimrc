@@ -12,6 +12,8 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
   Plug 'plasticboy/vim-markdown'
+  Plug 'octol/vim-cpp-enhanced-highlight'
+  Plug 'sva/vim-vue'
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 

@@ -1,6 +1,7 @@
 " barebone setup without plugins or gui
 let mapleader=" "
 
+set nocompatible
 set noswapfile
 set nohlsearch
 set smartcase

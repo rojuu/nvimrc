@@ -106,6 +106,8 @@ if g:load_coc
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
 
+  " coc-git binds
+  nmap <silent> gs <Plug>(coc-git-chunkinfo)
 
   " Use K to show documentation in preview window.
   nnoremap <silent> K :call <SID>show_documentation()<CR>

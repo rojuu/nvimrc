@@ -23,7 +23,6 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'mg979/vim-visual-multi'
   endif
 
-
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
   Plug 'plasticboy/vim-markdown'
@@ -32,6 +31,8 @@ call plug#begin('~/.config/vim/plugged')
 
   if g:load_coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  else
+    Plug 'rhysd/vim-clang-format'
   endif
 
   if g:load_fzf
@@ -68,6 +69,12 @@ if g:load_fzf && executable('fzf')
 endif
 
 nnoremap <leader>s :Rg <C-R><C-W><CR>
+
+if !g:load_coc
+  " clang-format binds
+  autocmd FileType c,cpp,objc nnoremap <buffer><Leader>f :<C-u>ClangFormat<CR>
+  autocmd FileType c,cpp,objc vnoremap <buffer><Leader>f :ClangFormat<CR>
+endif
 
 " ---- Coc config
 if g:load_coc
@@ -118,7 +125,8 @@ if g:load_coc
 
   " Formatting selected code.
   xmap <leader>f <Plug>(coc-format-selected)
-  nmap <leader>f <Plug>(coc-format-selected)
+  " Format entire document
+  nmap <leader>f <Plug>(coc-format)
 
   nnoremap <leader>so :CocCommand clangd.switchSourceHeader<CR>
 

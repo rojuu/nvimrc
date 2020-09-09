@@ -71,12 +71,6 @@ nnoremap <leader>s :Rg <C-R><C-W><CR>
 
 " ---- Coc config
 if g:load_coc
-  inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
   " Use <c-space> to trigger completion.
   if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()

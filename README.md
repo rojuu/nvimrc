@@ -4,8 +4,20 @@ My vim/neovim config file. Trying to keep it as simple as possible, so should be
 ## Usage:
 You should do `source <filename.vim>` for each of the configuration files you need.
 minimal.vim: Only most barebones config, no plugins or gui
-plugins.vim: load this to add some useful plugins
+plugins.vim: load this to add some useful plugins, has some optional arguments (see top of file)
 gui.vim: load this if you are in gui mode (e.g. in ~/.gvimrc)
+
+Example init.vim/.vimrc file:
+```
+let g:load_coc=1
+let g:load_fzf=1
+
+source ~/Projects/vimrc/minimal.vim
+source ~/Projects/vimrc/plugins.vim
+
+set bg=dark
+colorscheme codedark
+```
 
 ### Installing plugged vim:
 

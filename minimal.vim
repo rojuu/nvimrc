@@ -10,7 +10,7 @@ set ignorecase
 " reloading buffer when changes done
 set autoread
 " Reload when focus regained (incase someone from outside changed the file)
-" FocusGained only exists for gui
+" In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
 
 set listchars=tab:>-,trail:·,extends:>,precedes:<

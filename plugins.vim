@@ -140,12 +140,12 @@ if g:load_coc
   augroup end
 
   " Applying codeAction to the selected region.
-  xmap <leader>a  <Plug>(coc-codeaction-selected)
-
+  xmap <leader>la  <Plug>(coc-codeaction-selected)
   " Remap keys for applying codeAction to the current buffer.
-  nmap <leader>ac  <Plug>(coc-codeaction)
+  nmap <leader>la  <Plug>(coc-codeaction)
+
   " Apply AutoFix to problem on the current line.
-  nmap <leader>qf  <Plug>(coc-fix-current)
+  nmap <leader>lf  <Plug>(coc-fix-current)
 
   " Add `:Format` command to format current buffer.
   command! -nargs=0 Format :call CocAction('format')
@@ -157,7 +157,7 @@ if g:load_coc
   command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
   " Mappings for CocList
-  nnoremap <silent><nowait> <space>la  :<C-u>CocList diagnostics<cr>
+  nnoremap <silent><nowait> <space>ld  :<C-u>CocList diagnostics<cr>
   nnoremap <silent><nowait> <space>le  :<C-u>CocList extensions<cr>
   nnoremap <silent><nowait> <space>lc  :<C-u>CocList commands<cr>
   nnoremap <silent><nowait> <space>lo  :<C-u>CocList outline<cr>

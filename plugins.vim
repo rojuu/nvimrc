@@ -31,6 +31,7 @@ call plug#begin('~/.config/vim/plugged')
 
   if g:load_coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'jackguo380/vim-lsp-cxx-highlight'
   else
     Plug 'rhysd/vim-clang-format'
   endif

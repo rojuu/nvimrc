@@ -144,10 +144,8 @@ if g:load_coc
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
   augroup end
 
-  " Applying codeAction to the selected region.
-  xmap <leader>la  <Plug>(coc-codeaction-selected)
-  " Remap keys for applying codeAction to the current buffer.
-  nmap <leader>la  <Plug>(coc-codeaction)
+  " List actions
+  nmap <leader>la  :CocList actions<CR>
 
   " Apply AutoFix to problem on the current line.
   nmap <leader>lf  <Plug>(coc-fix-current)

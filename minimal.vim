@@ -12,6 +12,9 @@ set ignorecase
 
 set hidden
 
+" Affects for example CursorHold events
+set updatetime=100
+
 " reloading buffer when changes done
 set autoread
 " Reload when focus regained (incase someone from outside changed the file)

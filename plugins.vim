@@ -18,6 +18,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-vinegar'
   Plug 'liuchengxu/vim-which-key'
   Plug 'jremmen/vim-ripgrep'
+  Plug 'tmux-plugins/vim-tmux-focus-events'
 
   if g:load_multicursor
     Plug 'mg979/vim-visual-multi'

@@ -24,6 +24,9 @@ augroup filetypedetect
     au BufRead,BufNewFile *.json set filetype=jsonc
 augroup END
 
+" Use netrw treeview by default
+let g:netrw_liststyle = 3
+
 nnoremap <leader>x :%s/\(\s\)\+$//g<CR> ``
 
 nnoremap <C-J> <C-W><C-J>

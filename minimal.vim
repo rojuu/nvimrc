@@ -4,6 +4,8 @@ let mapleader=" "
 set nocompatible
 set noswapfile
 
+set mouse=a
+
 set nohlsearch
 set smartcase
 set ignorecase

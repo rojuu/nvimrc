@@ -16,6 +16,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-vinegar'
+  Plug 'tpope/vim-commentary'
   Plug 'liuchengxu/vim-which-key'
   Plug 'jremmen/vim-ripgrep'
   Plug 'tmux-plugins/vim-tmux-focus-events'

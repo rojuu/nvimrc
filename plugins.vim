@@ -26,7 +26,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
   Plug 'plasticboy/vim-markdown'
-  Plug 'octol/vim-cpp-enhanced-highlight'
+  Plug 'bfrg/vim-cpp-modern'
   Plug 'posva/vim-vue'
 
   if g:load_coc

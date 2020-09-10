@@ -3,9 +3,12 @@ let mapleader=" "
 
 set nocompatible
 set noswapfile
+
 set nohlsearch
 set smartcase
 set ignorecase
+
+set hidden
 
 " reloading buffer when changes done
 set autoread

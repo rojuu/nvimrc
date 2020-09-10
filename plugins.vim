@@ -51,6 +51,10 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
+let g:gruvbox_bold=0
+let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_invert_selection=0
+
 let g:jellybeans_overrides = {
 \    'background': { 'guibg': '202020', 'ctermbg': 'none', '256ctermbg': 'none' },
 \}

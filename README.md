@@ -16,7 +16,7 @@ source ~/Projects/vimrc/minimal.vim
 source ~/Projects/vimrc/plugins.vim
 
 set bg=dark
-colorscheme codedark
+colorscheme gruvbox
 ```
 
 ### Installing plugged vim:

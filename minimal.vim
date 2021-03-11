@@ -18,7 +18,7 @@ set autoread
 " In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
 
-set listchars=tab:>-,trail:Â·,extends:>,precedes:<
+set listchars=tab:>-,trail:·,extends:>,precedes:<
 set list
 set showbreak=\\
 
@@ -27,7 +27,7 @@ augroup filetypedetect
 augroup END
 
 " Use netrw treeview by default
-let g:netrw_liststyle = 3
+" let g:netrw_liststyle = 3
 
 nnoremap <leader>x :%s/\(\s\)\+$//g<CR> ``
 
@@ -58,7 +58,10 @@ nnoremap <leader>w :w<CR>
 " C-] is quite hard to use on nordic kb layout, so rebind that
 nnoremap <leader>t <C-]>
 
-nnoremap <leader>th :set hlsearch!<CR>
+" toggle search highlight
+nnoremap <leader>h :set hlsearch!<CR>
+
+" toggle line numbers
 nnoremap <leader>tn :set number!<CR>
 
 " yank current file full path to system clipboard

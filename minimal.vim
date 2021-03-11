@@ -62,7 +62,7 @@ nnoremap <leader>t <C-]>
 nnoremap <leader>h :set hlsearch!<CR>
 
 " toggle line numbers
-nnoremap <leader>tn :set number!<CR>
+nnoremap <leader>n :set number!<CR>
 
 " yank current file full path to system clipboard
 nnoremap <leader>yf :let @+ = expand("%:p")<CR>

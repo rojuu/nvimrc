@@ -20,6 +20,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'liuchengxu/vim-which-key'
   Plug 'jremmen/vim-ripgrep'
   Plug 'tmux-plugins/vim-tmux-focus-events'
+  Plug 'ton/vim-alternate'
 
   if g:load_multicursor
     Plug 'mg979/vim-visual-multi'
@@ -62,6 +63,9 @@ let g:jellybeans_overrides = {
 \}
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+" Switch beween header/source
+nnoremap <leader>so :Alternate<CR>
 
 set foldlevel=99 " Open all folds
 
@@ -135,7 +139,8 @@ if g:load_coc
   " Format entire document
   nmap <leader>f <Plug>(coc-format)
 
-  nnoremap <leader>so :CocCommand clangd.switchSourceHeader<CR>
+  " Using vim-alternate as a replacement for this
+  " nnoremap <leader>so :CocCommand clangd.switchSourceHeader<CR>
 
   augroup mygroup
     autocmd!

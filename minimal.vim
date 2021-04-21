@@ -6,6 +6,8 @@ set noswapfile
 
 set mouse=a
 
+set backspace=indent,eol,start
+
 set nohlsearch
 set smartcase
 set ignorecase

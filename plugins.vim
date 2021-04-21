@@ -30,6 +30,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'ziglang/zig.vim'
   Plug 'plasticboy/vim-markdown'
   Plug 'posva/vim-vue'
+  Plug 'tikhomirov/vim-glsl'
 
   if g:load_coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -84,6 +85,8 @@ if !g:load_coc
   autocmd FileType c,cpp,objc nnoremap <buffer><Leader>f :<C-u>ClangFormat<CR>
   autocmd FileType c,cpp,objc vnoremap <buffer><Leader>f :ClangFormat<CR>
 endif
+
+autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*.vert,*.glsl set ft=glsl
 
 " ---- Coc config
 if g:load_coc

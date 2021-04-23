@@ -8,7 +8,7 @@ set mouse=a
 
 set backspace=indent,eol,start
 
-set hlsearch
+set nohlsearch
 set smartcase
 set ignorecase
 
@@ -58,7 +58,8 @@ nnoremap <silent><leader>w :w<CR>
 nnoremap <leader>t <C-]>
 
 " disable search highlights until next search
-nnoremap <silent><leader>h :nohls<CR>
+nnoremap <silent><leader><leader> :nohls<CR>
+nnoremap <silent><leader>h :set hlsearch!<CR>
 " toggle line numbers
 nnoremap <silent><leader>n :set number!<CR>
 

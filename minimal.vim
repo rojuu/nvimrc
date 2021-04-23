@@ -8,7 +8,7 @@ set mouse=a
 
 set backspace=indent,eol,start
 
-set nohlsearch
+set hlsearch
 set smartcase
 set ignorecase
 
@@ -57,9 +57,8 @@ nnoremap <leader>w :w<CR>
 " C-] is quite hard to use on nordic kb layout, so rebind that
 nnoremap <leader>t <C-]>
 
-" toggle search highlight
-nnoremap <leader>h :set hlsearch!<CR>
-
+" disable search highlights until next search
+nnoremap <silent><leader>h :nohls<CR>
 " toggle line numbers
 nnoremap <leader>n :set number!<CR>
 

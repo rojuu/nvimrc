@@ -28,7 +28,7 @@ augroup filetypedetect
     au BufRead,BufNewFile *.json set filetype=jsonc
 augroup END
 
-nnoremap <leader>x :%s/\(\s\)\+$//g<CR> ``
+nnoremap <silent><leader>x :%s/\(\s\)\+$//g<CR> ``
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-H> <C-W><C-H>
@@ -47,12 +47,12 @@ inoremap jj <ESC>
 nnoremap <leader>v <C-W><C-V><C-W><C-L>
 nnoremap <leader>q <C-W><C-Q>
 
-nnoremap <leader>cn :cnext<CR>
-nnoremap <leader>cp :cprev<CR>
-nnoremap <leader>cq :cclose<CR>
-nnoremap <leader>cw :cwindow<CR>
+nnoremap <silent><leader>cn :cnext<CR>
+nnoremap <silent><leader>cp :cprev<CR>
+nnoremap <silent><leader>cq :cclose<CR>
+nnoremap <silent><leader>cw :cwindow<CR>
 
-nnoremap <leader>w :w<CR>
+nnoremap <silent><leader>w :w<CR>
 
 " C-] is quite hard to use on nordic kb layout, so rebind that
 nnoremap <leader>t <C-]>
@@ -60,10 +60,10 @@ nnoremap <leader>t <C-]>
 " disable search highlights until next search
 nnoremap <silent><leader>h :nohls<CR>
 " toggle line numbers
-nnoremap <leader>n :set number!<CR>
+nnoremap <silent><leader>n :set number!<CR>
 
 " yank current file full path to system clipboard
-nnoremap <leader>yf :let @+ = expand("%:p")<CR>
+nnoremap <silent><leader>yf :let @+ = expand("%:p")<CR>
 " yank current file relative path to system clipboard
-nnoremap <leader>yr :let @+ = expand("%")<CR>
+nnoremap <silent><leader>yr :let @+ = expand("%")<CR>
 

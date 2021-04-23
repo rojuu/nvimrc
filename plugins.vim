@@ -65,7 +65,7 @@ let g:jellybeans_overrides = {
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " Switch beween header/source
-nnoremap <leader>so :Alternate<CR>
+nnoremap <silent><leader>so :Alternate<CR>
 
 set foldlevel=99 " Open all folds
 
@@ -82,8 +82,8 @@ nnoremap <leader>s :Rg <C-R><C-W><CR>
 
 if !g:load_coc
   " clang-format binds
-  autocmd FileType c,cpp,objc nnoremap <buffer><Leader>f :<C-u>ClangFormat<CR>
-  autocmd FileType c,cpp,objc vnoremap <buffer><Leader>f :ClangFormat<CR>
+  autocmd FileType c,cpp,objc nnoremap <silent><buffer><Leader>f :<C-u>ClangFormat<CR>
+  autocmd FileType c,cpp,objc vnoremap <silent><buffer><Leader>f :ClangFormat<CR>
 endif
 
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*.vert,*.glsl set ft=glsl
@@ -153,7 +153,7 @@ if g:load_coc
   augroup end
 
   " List actions
-  nmap <leader>la  :CocList actions<CR>
+  nmap <silent><leader>la  :CocList actions<CR>
 
   " Apply AutoFix to problem on the current line.
   nmap <leader>lf  <Plug>(coc-fix-current)

@@ -9,14 +9,14 @@ gui.vim: load this if you are in gui mode (e.g. in ~/.gvimrc)
 
 Example init.vim/.vimrc file:
 ```
-let g:load_coc=1
+" See more config values at the top of plugins.vim
 let g:load_fzf=1
 
 source ~/Projects/vimrc/minimal.vim
 source ~/Projects/vimrc/plugins.vim
 
 set bg=dark
-colorscheme gruvbox
+colorscheme jellybeans
 ```
 
 ### Installing plugged vim:

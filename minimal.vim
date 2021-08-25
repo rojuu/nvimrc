@@ -20,8 +20,8 @@ set autoread
 " In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
 
-set listchars=tab:>-,trail:·,extends:>,precedes:<
-set list
+" set listchars=tab:>-,trail:·,extends:>,precedes:<
+" set list
 set showbreak=\\
 
 augroup filetypedetect

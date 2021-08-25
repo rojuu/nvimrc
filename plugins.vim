@@ -21,7 +21,6 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-vinegar'
   Plug 'tpope/vim-commentary'
   Plug 'liuchengxu/vim-which-key'
-  Plug 'jremmen/vim-ripgrep'
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'ton/vim-alternate'
 
@@ -50,6 +49,7 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'junegunn/fzf.vim'
   else
     Plug 'kien/ctrlp.vim'
+    Plug 'jremmen/vim-ripgrep'
   endif
 
   Plug 'vim-airline/vim-airline'

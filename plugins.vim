@@ -10,6 +10,9 @@ endif
 if !exists("g:load_multicursor")
   let g:load_multicursor=1
 endif
+if !exists("g:load_anyjump")
+  let g:load_anyjump=1
+endif
 
 call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'
@@ -36,6 +39,10 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
   else
     Plug 'rhysd/vim-clang-format'
+  endif
+
+  if g:load_anyjump
+    Plug 'pechorin/any-jump.vim'
   endif
 
   if g:load_fzf

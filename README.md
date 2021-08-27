@@ -19,6 +19,14 @@ set bg=dark
 colorscheme jellybeans
 ```
 
+To use my extended C syntax you can use the commands below to symlink the syntax files into vim's syntax search path. Do note however that the syntax rule assumes that custom structs are in PascalCase or have \_t postfix in them, so if your code follows some other code guidelines, this might have weird results.
+```
+# For vim
+ln -s <path_to_this_repo>/after/syntax/c.vim ~/.vim/after/syntax/c.vim
+# For nvim
+ln -s <path_to_this_repo>/after/syntax/c.vim ~/.config/nvim/after/syntax/c.vim
+```
+
 ### Installing plugged vim:
 
 #### Vim

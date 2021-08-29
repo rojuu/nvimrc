@@ -16,33 +16,10 @@ endif
 
 call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'
-  Plug 'neoclide/jsonc.vim'
-  Plug 'ziglang/zig.vim'
-  Plug 'plasticboy/vim-markdown'
-  Plug 'posva/vim-vue'
-  Plug 'tikhomirov/vim-glsl'
-
   Plug 'tpope/vim-fugitive'
-  Plug 'neoclide/jsonc.vim'
-  Plug 'ziglang/zig.vim'
-  Plug 'plasticboy/vim-markdown'
-  Plug 'posva/vim-vue'
-  Plug 'tikhomirov/vim-glsl'
-
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-vinegar'
-  Plug 'neoclide/jsonc.vim'
-  Plug 'ziglang/zig.vim'
-  Plug 'plasticboy/vim-markdown'
-  Plug 'posva/vim-vue'
-  Plug 'tikhomirov/vim-glsl'
-
   Plug 'tpope/vim-commentary'
-  Plug 'neoclide/jsonc.vim'
-  Plug 'ziglang/zig.vim'
-  Plug 'plasticboy/vim-markdown'
-  Plug 'posva/vim-vue'
-  Plug 'tikhomirov/vim-glsl'
 
   Plug 'liuchengxu/vim-which-key'
   Plug 'tmux-plugins/vim-tmux-focus-events'

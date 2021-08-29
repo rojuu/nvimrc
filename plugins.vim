@@ -16,23 +16,44 @@ endif
 
 call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-vinegar'
-  Plug 'tpope/vim-commentary'
-  Plug 'liuchengxu/vim-which-key'
-  Plug 'tmux-plugins/vim-tmux-focus-events'
-  Plug 'ton/vim-alternate'
-
-  if g:load_multicursor
-    Plug 'mg979/vim-visual-multi'
-  endif
-
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
   Plug 'plasticboy/vim-markdown'
   Plug 'posva/vim-vue'
   Plug 'tikhomirov/vim-glsl'
+
+  Plug 'tpope/vim-fugitive'
+  Plug 'neoclide/jsonc.vim'
+  Plug 'ziglang/zig.vim'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'posva/vim-vue'
+  Plug 'tikhomirov/vim-glsl'
+
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-vinegar'
+  Plug 'neoclide/jsonc.vim'
+  Plug 'ziglang/zig.vim'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'posva/vim-vue'
+  Plug 'tikhomirov/vim-glsl'
+
+  Plug 'tpope/vim-commentary'
+  Plug 'neoclide/jsonc.vim'
+  Plug 'ziglang/zig.vim'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'posva/vim-vue'
+  Plug 'tikhomirov/vim-glsl'
+
+  Plug 'liuchengxu/vim-which-key'
+  Plug 'tmux-plugins/vim-tmux-focus-events'
+  Plug 'ton/vim-alternate'
+
+  Plug 'preservim/nerdtree'
+  Plug 'vim-airline/vim-airline'
+
+  if g:load_multicursor
+    Plug 'mg979/vim-visual-multi'
+  endif
 
   if g:load_coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -52,7 +73,11 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'jremmen/vim-ripgrep'
   endif
 
-  Plug 'vim-airline/vim-airline'
+  Plug 'neoclide/jsonc.vim'
+  Plug 'ziglang/zig.vim'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'posva/vim-vue'
+  Plug 'tikhomirov/vim-glsl'
 
   Plug 'morhetz/gruvbox'
   Plug 'nanotech/jellybeans.vim'
@@ -73,6 +98,9 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " Switch beween header/source
 nnoremap <silent><leader>so :Alternate<CR>
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 set foldlevel=99 " Open all folds
 

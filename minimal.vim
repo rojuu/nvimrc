@@ -20,8 +20,7 @@ set autoread
 " In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
 
-" set listchars=tab:>-,trail:·,extends:>,precedes:<
-" set list
+set list
 set showbreak=\\
 
 augroup filetypedetect
@@ -60,8 +59,6 @@ nnoremap <leader>t <C-]>
 " disable search highlights until next search
 nnoremap <silent><leader><leader> :nohls<CR>
 nnoremap <silent><leader>h :set hlsearch!<CR>
-" toggle line numbers
-nnoremap <silent><leader>n :set number!<CR>
 
 " yank current file full path to system clipboard
 nnoremap <silent><leader>yf :let @+ = expand("%:p")<CR>

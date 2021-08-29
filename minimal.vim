@@ -20,6 +20,7 @@ set autoread
 " In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
 
+set listchars=tab:>\ ,trail:-,nbsp:+
 set list
 set showbreak=\\
 

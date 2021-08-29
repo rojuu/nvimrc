@@ -12,8 +12,6 @@ set nohlsearch
 set smartcase
 set ignorecase
 
-set tabstop=4
-
 set hidden
 
 " reloading buffer when changes done

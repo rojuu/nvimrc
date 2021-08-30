@@ -26,6 +26,12 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'ton/vim-alternate'
 
   Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'PhilRunninger/nerdtree-visual-selection'
+  "" Could be cool, but needs special font, so needs some setup'
+  "" Probably at least add as optional plugin
+  " Plug 'ryanoasis/vim-devicons'
+
   Plug 'vim-airline/vim-airline'
 
   if g:load_multicursor

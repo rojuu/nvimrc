@@ -34,6 +34,8 @@ call plug#begin('~/.config/vim/plugged')
 
   Plug 'vim-airline/vim-airline'
 
+  Plug 'chrisbra/Colorizer'
+
   if g:load_multicursor
     Plug 'mg979/vim-visual-multi'
   endif
@@ -97,6 +99,8 @@ if g:load_fzf && executable('fzf')
 endif
 
 nnoremap <leader>s :Rg <C-R><C-W><CR>
+
+nnoremap <leader>ct :ColorToggle<CR>
 
 if !g:load_coc
   " clang-format binds

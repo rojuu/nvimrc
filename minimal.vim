@@ -14,6 +14,9 @@ set ignorecase
 
 set hidden
 
+filetype plugin on
+syntax on
+
 " reloading buffer when changes done
 set autoread
 " Reload when focus regained (incase someone from outside changed the file)

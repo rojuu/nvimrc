@@ -1,9 +1,6 @@
 " loading this file assumes that you have vim plugged installed
 
 " options for some optional plugins
-if !exists("g:load_coc")
-  let g:load_coc=0
-endif
 if !exists("g:load_multicursor")
   let g:load_multicursor=1
 endif
@@ -39,14 +36,10 @@ call plug#begin('~/.config/vim/plugged')
 
   Plug 'chrisbra/Colorizer'
 
+  Plug 'rhysd/vim-clang-format'
+
   if g:load_multicursor
     Plug 'mg979/vim-visual-multi'
-  endif
-
-  if g:load_coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  else
-    Plug 'rhysd/vim-clang-format'
   endif
 
   if g:load_anyjump

@@ -85,7 +85,8 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 " Switch beween header/source
 nnoremap <silent><leader>so :Alternate<CR>
 
-nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>nn :NERDTreeFocus<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 set foldlevel=99 " Open all folds

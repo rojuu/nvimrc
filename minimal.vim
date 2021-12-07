@@ -67,9 +67,11 @@ nnoremap <leader>tn :tabnew<CR>
 
 " disable search highlights until next search
 nnoremap <silent><leader><leader> :nohls<CR>
-nnoremap <silent><leader>h :set hlsearch!<CR>
-
 nnoremap <silent><ESC> :nohls<CR>
+
+nnoremap <silent>* *``
+
+nnoremap <silent><leader>h :set hlsearch!<CR>
 
 " yank current file full path to system clipboard
 nnoremap <silent><leader>yf :let @+ = expand("%:p")<CR>

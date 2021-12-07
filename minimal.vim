@@ -33,6 +33,9 @@ augroup filetypedetect
     au BufRead,BufNewFile *.json set filetype=jsonc
 augroup END
 
+set foldmethod=indent
+set foldlevelstart=99
+
 nnoremap <silent><leader>x :%s/\(\s\)\+$//g<CR> ``
 
 nnoremap <C-J> <C-W><C-J>

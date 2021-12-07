@@ -26,6 +26,8 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'ton/vim-alternate'
 
+  Plug 'easymotion/vim-easymotion'
+
   Plug 'preservim/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'PhilRunninger/nerdtree-visual-selection'
@@ -92,8 +94,6 @@ nnoremap <silent><leader>so :Alternate<CR>
 nnoremap <leader>nn :NERDTreeFocus<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-
-set foldlevel=99 " Open all folds
 
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'

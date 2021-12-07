@@ -11,7 +11,7 @@ if !exists("g:load_multicursor")
   let g:load_multicursor=1
 endif
 if !exists("g:load_anyjump")
-  let g:load_anyjump=1
+  let g:load_anyjump=0
 endif
 
 call plug#begin('~/.config/vim/plugged')

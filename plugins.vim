@@ -100,115 +100,20 @@ if executable('rg')
     let b:preferred_searcher = 'rg'
 endif
 
+
+nnoremap <leader>s :Rg <C-R><C-W><CR>
+
+nnoremap <leader>ct :ColorToggle<CR>
+
+autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*.vert,*.glsl set ft=glsl
+
+" nvim specific binds
 if has('nvim')
-    " nvim specific binds
     nnoremap <C-P> <cmd>Telescope find_files<cr>
     nnoremap <leader>ff <cmd>Telescope find_files<cr>
     nnoremap <leader>fg <cmd>Telescope live_grep<cr>
     nnoremap <leader>fc <cmd>Telescope grep_string<cr>
     nnoremap <leader>fb <cmd>Telescope buffers<cr>
     nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-endif
-
-nnoremap <leader>s :Rg <C-R><C-W><CR>
-
-nnoremap <leader>ct :ColorToggle<CR>
-
-if !g:load_coc
-  " clang-format binds
-  autocmd FileType c,cpp,objc nnoremap <silent><buffer><Leader>f :<C-u>ClangFormat<CR>
-  autocmd FileType c,cpp,objc vnoremap <silent><buffer><Leader>f :ClangFormat<CR>
-endif
-
-autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*.vert,*.glsl set ft=glsl
-
-" ---- Coc config
-if g:load_coc
-  " Use <c-space> to trigger completion.
-  if has('nvim')
-    inoremap <silent><expr> <c-space> coc#refresh()
-  else
-    inoremap <silent><expr> <c-@> coc#refresh()
-  endif
-
-  " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-  " position. Coc only does snippet and additional edit on confirm.
-  " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-  if exists('*complete_info')
-    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-  else
-    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-  endif
-
-  " Navigate diagnostics
-  " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-  nmap <silent> <leader>dp <Plug>(coc-diagnostic-prev)
-  nmap <silent> <leader>dn <Plug>(coc-diagnostic-next)
-
-  " GoTo code navigation.
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
-
-  " coc-git binds
-  nmap <silent> <leader>gs <Plug>(coc-git-chunkinfo)
-  nmap <silent> <leader>gn <Plug>(coc-git-nextchunk)
-  nmap <silent> <leader>gp <Plug>(coc-git-prevchunk)
-
-  " Use K to show documentation in preview window.
-  nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    else
-      call CocAction('doHover')
-    endif
-  endfunction
-
-  " Symbol renaming.
-  nmap <leader>rn <Plug>(coc-rename)
-
-  " Formatting selected code.
-  xmap <leader>f <Plug>(coc-format-selected)
-  " Format entire document
-  nmap <leader>f <Plug>(coc-format)
-
-  " Using vim-alternate as a replacement for this
-  " nnoremap <leader>so :CocCommand clangd.switchSourceHeader<CR>
-
-  augroup mygroup
-    autocmd!
-    " Setup formatexpr specified filetype(s).
-    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-    " Update signature help on jump placeholder.
-    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  augroup end
-
-  " List actions
-  nmap <silent><leader>la  :CocList actions<CR>
-
-  " Apply AutoFix to problem on the current line.
-  nmap <leader>lf  <Plug>(coc-fix-current)
-
-  " Add `:Format` command to format current buffer.
-  command! -nargs=0 Format :call CocAction('format')
-
-  " Add `:Fold` command to fold current buffer.
-  command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-  " Add `:OR` command for organize imports of the current buffer.
-  command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-  " Mappings for CocList
-  nnoremap <silent><nowait> <space>ld  :<C-u>CocList diagnostics<cr>
-  nnoremap <silent><nowait> <space>le  :<C-u>CocList extensions<cr>
-  nnoremap <silent><nowait> <space>lc  :<C-u>CocList commands<cr>
-  nnoremap <silent><nowait> <space>lo  :<C-u>CocList outline<cr>
-  nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
-  nnoremap <silent><nowait> <space>lj  :<C-u>CocNext<CR>
-  nnoremap <silent><nowait> <space>lk  :<C-u>CocPrev<CR>
-  nnoremap <silent><nowait> <space>lp  :<C-u>CocListResume<CR>
 endif
 

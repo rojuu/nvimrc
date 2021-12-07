@@ -8,8 +8,12 @@ if !exists("g:load_multicursor")
   let g:load_multicursor=1
 endif
 if !exists("g:load_anyjump")
-  let g:load_anyjump=0
+  let g:load_anyjump=1
 endif
+
+" Any jump seems to have some problems with regex parsing in rg with C++
+" so let's keep using ag for now (even though I use rg otherwise)
+let g:any_jump_search_prefered_engine="ag"
 
 call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'

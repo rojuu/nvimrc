@@ -40,10 +40,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
+nnoremap <silent>j gj
+nnoremap <silent>k gk
+vnoremap <silent>j gj
+vnoremap <silent>k gk
 
 " no need to rebind esc to caps as this is a more portable solution
 " to exit insert mode easily
@@ -65,9 +65,7 @@ nnoremap <leader>tt <C-]>
 nnoremap <leader>tc :tabclose<CR>
 nnoremap <leader>tn :tabnew<CR>
 
-" disable search highlights until next search
-nnoremap <silent><leader><leader> :nohls<CR>
-nnoremap <silent><ESC> :nohls<CR>
+nnoremap <silent><ESC> :nohls<CR>:cclose<CR>
 
 nnoremap <silent>* *``
 

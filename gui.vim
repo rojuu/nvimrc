@@ -19,3 +19,8 @@ autocmd GUIEnter * set vb t_vb=
 if exists(':GuiTabline')
     GuiTabline 0
 endif
+
+" Very ugly gui popup should also go away
+if exists(':GuiPopup')
+    GuiPopup 0
+endif

@@ -4,9 +4,6 @@
 if !exists("g:load_coc")
   let g:load_coc=0
 endif
-if !exists("g:load_fzf")
-  let g:load_fzf=0
-endif
 if !exists("g:load_multicursor")
   let g:load_multicursor=1
 endif
@@ -50,13 +47,16 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'pechorin/any-jump.vim'
   endif
 
-  if g:load_fzf
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
+  if has('nvim')
+    " nvim specific plugins
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
   else
+    " fall back to ctrlp if not using nvim
     Plug 'kien/ctrlp.vim'
-    Plug 'jremmen/vim-ripgrep'
   endif
+
+  Plug 'jremmen/vim-ripgrep'
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
@@ -95,8 +95,14 @@ if executable('rg')
     let b:preferred_searcher = 'rg'
 endif
 
-if g:load_fzf && executable('fzf')
-    nnoremap <C-P> :Files<CR>
+if has('nvim')
+    " nvim specific binds
+    nnoremap <C-P> <cmd>Telescope find_files<cr>
+    nnoremap <leader>ff <cmd>Telescope find_files<cr>
+    nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+    nnoremap <leader>fc <cmd>Telescope grep_string<cr>
+    nnoremap <leader>fb <cmd>Telescope buffers<cr>
+    nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 endif
 
 nnoremap <leader>s :Rg <C-R><C-W><CR>

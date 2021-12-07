@@ -67,6 +67,8 @@ nnoremap <leader>tt <C-]>
 
 nnoremap <leader>tc :tabclose<CR>
 nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>tl :tabnext<CR>
+nnoremap <leader>th :tabprevious<CR>
 
 nnoremap <silent><ESC> :nohls<CR>:cclose<CR>
 

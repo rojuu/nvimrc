@@ -63,6 +63,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'plasticboy/vim-markdown'
   Plug 'posva/vim-vue'
   Plug 'tikhomirov/vim-glsl'
+  Plug 'bfrg/vim-cpp-modern'
 
   Plug 'morhetz/gruvbox'
   Plug 'nanotech/jellybeans.vim'

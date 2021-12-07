@@ -8,7 +8,6 @@ set mouse=a
 
 set backspace=indent,eol,start
 
-set nohlsearch
 set smartcase
 set ignorecase
 
@@ -23,7 +22,10 @@ set autoread
 " In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
 
-set listchars=tab:>\ ,trail:-,nbsp:+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+"set listchars=tab:>\ ,trail:-,nbsp:+
+set listchars=tab:>\ ,nbsp:+
 set list
 set showbreak=\\
 
@@ -58,14 +60,32 @@ nnoremap <silent><leader>cw :cwindow<CR>
 nnoremap <silent><leader>w :w<CR>
 
 " C-] is quite hard to use on nordic kb layout, so rebind that
-nnoremap <leader>t <C-]>
+nnoremap <leader>tt <C-]>
+
+nnoremap <leader>tc :tabclose<CR>
+nnoremap <leader>tn :tabnew<CR>
 
 " disable search highlights until next search
 nnoremap <silent><leader><leader> :nohls<CR>
 nnoremap <silent><leader>h :set hlsearch!<CR>
 
+nnoremap <silent><ESC> :nohls<CR>
+
 " yank current file full path to system clipboard
 nnoremap <silent><leader>yf :let @+ = expand("%:p")<CR>
 " yank current file relative path to system clipboard
 nnoremap <silent><leader>yr :let @+ = expand("%")<CR>
+
+noremap <silent><F1> 1gt
+noremap <silent><F2> 2gt
+noremap <silent><F3> 3gt
+noremap <silent><F4> 4gt
+noremap <silent><F5> 5gt
+noremap <silent><F6> 6gt
+noremap <silent><F7> 7gt
+noremap <silent><F8> 8gt
+noremap <silent><F9> 9gt
+noremap <silent><F10> 10gt
+noremap <silent><F11> 11gt
+noremap <silent><F12> 12gt
 

@@ -50,12 +50,15 @@ call plug#begin('~/.config/vim/plugged')
     " nvim specific plugins
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   else
     " fall back to ctrlp if not using nvim
     Plug 'kien/ctrlp.vim'
   endif
 
   Plug 'jremmen/vim-ripgrep'
+
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
@@ -108,5 +111,18 @@ if has('nvim')
     nnoremap <leader>fc <cmd>Telescope grep_string<cr>
     nnoremap <leader>fb <cmd>Telescope buffers<cr>
     nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+    lua <<EOF
+    require'nvim-treesitter.configs'.setup {
+      ensure_installed = "maintained",
+      sync_install = false,
+      ignore_install = {},
+      highlight = {
+        enable = true,
+        disable = {},
+        additional_vim_regex_highlighting = false,
+      },
+    }
+EOF
 endif
 

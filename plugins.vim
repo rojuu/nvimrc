@@ -96,6 +96,9 @@ if executable('rg')
     let b:preferred_searcher = 'rg'
 endif
 
+" clang-format binds
+autocmd FileType c,cpp,objc nnoremap <silent><buffer><leader>f :ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <silent><buffer><leader>f :ClangFormat<CR>
 
 nnoremap <leader>s :Rg <C-R><C-W><CR>
 

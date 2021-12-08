@@ -60,6 +60,12 @@ nnoremap <silent><leader>cp :cprev<CR>
 nnoremap <silent><leader>cq :cclose<CR>
 nnoremap <silent><leader>cw :cwindow<CR>
 
+vnoremap <silent>< <gv
+vnoremap <silent>> >gv
+
+vnoremap <silent><TAB> >gv
+vnoremap <silent><S-TAB> <gv
+
 nnoremap <silent><leader>w :w<CR>
 
 " C-] is quite hard to use on nordic kb layout, so rebind that

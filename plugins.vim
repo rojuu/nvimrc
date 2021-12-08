@@ -115,7 +115,7 @@ if has('nvim')
     nnoremap <leader>fb <cmd>Telescope buffers<cr>
     nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-    lua <<EOF
+lua <<EOF
     require'nvim-treesitter.configs'.setup {
       ensure_installed = "maintained",
       sync_install = false,
@@ -127,5 +127,6 @@ if has('nvim')
       },
     }
 EOF
+
 endif
 

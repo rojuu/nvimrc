@@ -13,6 +13,8 @@ set ignorecase
 
 set hidden
 
+set belloff=all
+
 filetype plugin on
 syntax on
 
@@ -24,10 +26,15 @@ au FocusGained,BufEnter * checktime
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-"set listchars=tab:>\ ,trail:-,nbsp:+
-set listchars=tab:>\ ,nbsp:+
+set tabstop=4
+
+set listchars=tab:»\ ,space:·,trail:·,nbsp:+
+" set listchars=tab:>\ ,nbsp:+
+" set list
 set list
-set showbreak=\\
+set showbreak=↪
+" would be cool to add '↩' at the end of the line as well
+" issue for that in neovim: https://github.com/neovim/neovim/issues/4762
 
 augroup filetypedetect
     au BufRead,BufNewFile *.json set filetype=jsonc
@@ -78,12 +85,12 @@ nnoremap <leader>th :tabprevious<CR>
 
 nnoremap <silent><ESC> :nohls<CR>:cclose<CR>
 
-nnoremap <silent>* *``
+" nnoremap <silent>* *``
 
 nnoremap <silent><leader>h :set hlsearch!<CR>
 
 " yank current file full path to system clipboard
-nnoremap <silent><leader>yf :let @+ = expand("%:p")<CR>
+noremap <silent><leader>yf :let @+ = expand("%:p")<CR>
 " yank current file relative path to system clipboard
 nnoremap <silent><leader>yr :let @+ = expand("%")<CR>
 

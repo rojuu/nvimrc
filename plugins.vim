@@ -7,6 +7,9 @@ endif
 if !exists("g:load_anyjump")
   let g:load_anyjump=1
 endif
+if !exists("g:ignore_telescope")
+  let g:ignore_telescope=!has('nvim')
+endif
 
 " Any jump seems to have some problems with regex parsing in rg with C++
 " so let's keep using ag for now (even though I use rg otherwise)
@@ -46,12 +49,12 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'pechorin/any-jump.vim'
   endif
 
-  if has('nvim')
+  if !g:ignore_telescope
     " nvim specific plugins
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
   else
-    " fall back to ctrlp if not using nvim
+    " fall back to ctrlp if not using telescope
     Plug 'kien/ctrlp.vim'
   endif
 
@@ -63,6 +66,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'plasticboy/vim-markdown'
   Plug 'posva/vim-vue'
   Plug 'tikhomirov/vim-glsl'
+  Plug 'beyondmarc/hlsl.vim'
   Plug 'bfrg/vim-cpp-modern'
 
   Plug 'morhetz/gruvbox'
@@ -105,7 +109,7 @@ nnoremap <leader>ct :ColorToggle<CR>
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*.vert,*.glsl set ft=glsl
 
 " nvim specific binds
-if has('nvim')
+if !g:ignore_telescope
     nnoremap <C-P> <cmd>Telescope find_files<cr>
     nnoremap <leader>ff <cmd>Telescope find_files<cr>
     nnoremap <leader>fg <cmd>Telescope live_grep<cr>

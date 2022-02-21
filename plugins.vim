@@ -58,6 +58,10 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'kien/ctrlp.vim'
   endif
 
+  if has('nvim')
+    Plug 'glepnir/indent-guides.nvim'
+  endif
+
   Plug 'jremmen/vim-ripgrep'
 
 

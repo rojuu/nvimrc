@@ -7,6 +7,9 @@ endif
 if !exists("g:load_anyjump")
   let g:load_anyjump=1
 endif
+if !exists("g:load_fzf")
+  let g:load_fzf=0
+endif
 if !exists("g:ignore_telescope")
   let g:ignore_telescope=!has('nvim')
 endif
@@ -49,13 +52,18 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'pechorin/any-jump.vim'
   endif
 
-  if !g:ignore_telescope
-    " nvim specific plugins
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+  if g:load_fzf
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
   else
-    " fall back to ctrlp if not using telescope
-    Plug 'kien/ctrlp.vim'
+    if !g:ignore_telescope
+      " nvim specific plugins
+      Plug 'nvim-lua/plenary.nvim'
+      Plug 'nvim-telescope/telescope.nvim'
+    else
+      " fall back to ctrlp if not using telescope
+      Plug 'kien/ctrlp.vim'
+    endif
   endif
 
   if has('nvim')
@@ -63,7 +71,7 @@ call plug#begin('~/.config/vim/plugged')
   endif
 
   Plug 'jremmen/vim-ripgrep'
-
+  Plug 'rking/ag.vim'
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
@@ -72,6 +80,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tikhomirov/vim-glsl'
   Plug 'beyondmarc/hlsl.vim'
   Plug 'bfrg/vim-cpp-modern'
+  Plug 'mxw/vim-jsx'
 
   Plug 'morhetz/gruvbox'
   Plug 'nanotech/jellybeans.vim'
@@ -106,11 +115,15 @@ endif
 autocmd FileType c,cpp,objc nnoremap <silent><buffer><leader>f :ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <silent><buffer><leader>f :ClangFormat<CR>
 
-nnoremap <leader>s :Rg <C-R><C-W><CR>
+nnoremap <leader>s :Ag <C-R><C-W><CR>
 
 nnoremap <leader>ct :ColorToggle<CR>
 
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*.vert,*.glsl set ft=glsl
+
+if g:load_fzf
+  nnoremap <C-P> :Files<CR>
+endif
 
 " nvim specific binds
 if !g:ignore_telescope

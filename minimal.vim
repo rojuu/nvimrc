@@ -28,7 +28,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set tabstop=4
 
-set listchars=tab:»\ ,trail:·,nbsp:+
+set listchars=tab:�\ ,trail:�,nbsp:+
 " set listchars=tab:»\ ,space:·,trail:·,nbsp:+
 " set listchars=tab:>\ ,nbsp:+
 " set list

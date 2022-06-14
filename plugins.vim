@@ -16,7 +16,8 @@ endif
 
 " Any jump seems to have some problems with regex parsing in rg with C++
 " so let's keep using ag for now (even though I use rg otherwise)
-let g:any_jump_search_prefered_engine="ag"
+" let g:any_jump_search_prefered_engine="ag"
+let g:any_jump_search_prefered_engine="rg"
 
 call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'
@@ -49,7 +50,8 @@ call plug#begin('~/.config/vim/plugged')
   endif
 
   if g:load_anyjump
-    Plug 'pechorin/any-jump.vim'
+    Plug 'artemkin/any-jump.vim' "temporarily at least use this one as it has better rg support
+    " Plug 'pechorin/any-jump.vim'
   endif
 
   if g:load_fzf
@@ -64,10 +66,6 @@ call plug#begin('~/.config/vim/plugged')
       " fall back to ctrlp if not using telescope
       Plug 'kien/ctrlp.vim'
     endif
-  endif
-
-  if has('nvim')
-    Plug 'glepnir/indent-guides.nvim'
   endif
 
   Plug 'jremmen/vim-ripgrep'
@@ -115,7 +113,7 @@ endif
 autocmd FileType c,cpp,objc nnoremap <silent><buffer><leader>f :ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <silent><buffer><leader>f :ClangFormat<CR>
 
-nnoremap <leader>s :Ag <C-R><C-W><CR>
+nnoremap <leader>s :Rg <C-R><C-W><CR>
 
 nnoremap <leader>ct :ColorToggle<CR>
 

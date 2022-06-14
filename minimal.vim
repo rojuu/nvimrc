@@ -28,12 +28,14 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set tabstop=4
 
-set listchars=tab:»\ ,trail:·,nbsp:+
+set listchars=tab:>\ ,trail:-,nbsp:+
+" set listchars=tab:»\ ,trail:·,nbsp:+
 " set listchars=tab:Â»\ ,space:Â·,trail:Â·,nbsp:+
 " set listchars=tab:>\ ,nbsp:+
 " set list
 set list
-set showbreak=â†ª
+set showbreak=\\
+" set showbreak=â†ª
 " would be cool to add 'â†©' at the end of the line as well
 " issue for that in neovim: https://github.com/neovim/neovim/issues/4762
 

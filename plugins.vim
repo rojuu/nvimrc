@@ -13,6 +13,9 @@ endif
 if !exists("g:ignore_telescope")
   let g:ignore_telescope=!has('nvim')
 endif
+if !exists("g:load_treesitter")
+  let g:load_treesitter=0
+endif
 
 " Any jump seems to have some problems with regex parsing in rg with C++
 " so let's keep using ag for now (even though I use rg otherwise)
@@ -70,6 +73,11 @@ call plug#begin('~/.config/vim/plugged')
 
   Plug 'jremmen/vim-ripgrep'
   Plug 'rking/ag.vim'
+
+  if g:load_treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter-context'
+  end
 
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
@@ -132,4 +140,7 @@ if !g:ignore_telescope
     nnoremap <leader>fb <cmd>Telescope buffers<cr>
     nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 endif
+
+lua require('config')
+
 

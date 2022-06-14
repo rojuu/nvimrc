@@ -77,6 +77,7 @@ call plug#begin('~/.config/vim/plugged')
   if g:load_treesitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter-context'
+    Plug 'nvim-treesitter/playground'
   end
 
   Plug 'neoclide/jsonc.vim'

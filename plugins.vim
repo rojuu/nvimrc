@@ -77,7 +77,7 @@ call plug#begin('~/.config/vim/plugged')
   if g:load_treesitter
     " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter' " the one above was buggy.. should investigate at some point
-    " Plug 'nvim-treesitter/nvim-treesitter-context' " also buggy in some files, so it is more confusing than helpful if that happens..
+    Plug 'nvim-treesitter/nvim-treesitter-context'
     Plug 'nvim-treesitter/playground'
   end
 

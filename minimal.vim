@@ -86,7 +86,10 @@ nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>tl :tabnext<CR>
 nnoremap <leader>th :tabprevious<CR>
 
-nnoremap <silent><ESC> :nohls<CR>:cclose<CR>
+if has('nvim')
+  " for some reason this breaks on vanilla vim?
+  nnoremap <silent><ESC> :nohls<CR>:cclose<CR>
+endif
 
 " nnoremap <silent>* *``
 

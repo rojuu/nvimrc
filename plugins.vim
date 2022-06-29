@@ -144,6 +144,10 @@ if !g:ignore_telescope
     nnoremap <leader>fc <cmd>Telescope grep_string<cr>
     nnoremap <leader>fb <cmd>Telescope buffers<cr>
     nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+    if g:load_treesitter
+        nnoremap<leader>r <cmd>Telescope treesitter<cr>
+    endif
 endif
 
 lua require('config')

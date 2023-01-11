@@ -10,16 +10,15 @@ endif
 if !exists("g:load_fzf")
   let g:load_fzf=0
 endif
-if !exists("g:ignore_telescope")
-  let g:ignore_telescope=!has('nvim')
-endif
 if !exists("g:load_treesitter")
   let g:load_treesitter=0
 endif
 
+
 " Any jump seems to have some problems with regex parsing in rg with C++
 " so let's keep using ag for now (even though I use rg otherwise)
 " let g:any_jump_search_prefered_engine="ag"
+" using a different fork for now
 let g:any_jump_search_prefered_engine="rg"
 
 call plug#begin('~/.config/vim/plugged')
@@ -34,13 +33,6 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'ton/vim-alternate'
 
   Plug 'easymotion/vim-easymotion'
-
-  Plug 'preservim/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'PhilRunninger/nerdtree-visual-selection'
-  "" Could be cool, but needs special font, so needs some setup'
-  "" Probably at least add as optional plugin
-  " Plug 'ryanoasis/vim-devicons'
 
   Plug 'vim-airline/vim-airline'
 
@@ -61,14 +53,8 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
   else
-    if !g:ignore_telescope
-      " nvim specific plugins
-      Plug 'nvim-lua/plenary.nvim'
-      Plug 'nvim-telescope/telescope.nvim'
-    else
-      " fall back to ctrlp if not using telescope
-      Plug 'kien/ctrlp.vim'
-    endif
+    " fall back to ctrlp if not using telescope
+    Plug 'kien/ctrlp.vim'
   endif
 
   Plug 'jremmen/vim-ripgrep'
@@ -90,6 +76,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'bfrg/vim-cpp-modern'
   Plug 'mxw/vim-jsx'
 
+  Plug 'sonph/onehalf', { 'rtp': 'vim' }
   Plug 'morhetz/gruvbox'
   Plug 'nanotech/jellybeans.vim'
   Plug 'jacoborus/tender.vim'
@@ -113,10 +100,6 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 " Switch beween header/source
 nnoremap <silent><leader>so :Alternate<CR>
 
-nnoremap <leader>nn :NERDTreeFocus<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
     let b:preferred_searcher = 'rg'
@@ -134,22 +117,11 @@ autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*.vert,*.glsl set ft=glsl
 
 if g:load_fzf
   nnoremap <C-P> :Files<CR>
+  nnoremap <leader>b :Buffers<CR>
 endif
 
-" nvim specific binds
-if !g:ignore_telescope
-    nnoremap <C-P> <cmd>Telescope find_files<cr>
-    nnoremap <leader>ff <cmd>Telescope find_files<cr>
-    nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-    nnoremap <leader>fc <cmd>Telescope grep_string<cr>
-    nnoremap <leader>fb <cmd>Telescope buffers<cr>
-    nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-    if g:load_treesitter
-        nnoremap<leader>r <cmd>Telescope treesitter<cr>
-    endif
+if has('nvim')
+  lua require('config')
 endif
-
-lua require('config')
 
 

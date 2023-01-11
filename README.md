@@ -1,5 +1,5 @@
 # init.vim
-My vim/neovim config file. At least the minimal.vim should work in normal vim, but most other stuff has been turning fairly neovim specific, as some plugins are lua only (treesitter, telescope, etc.). Trying to keep it as simple as possible, so should be portable between the two. For lua specific plugins or config, I have added behind an if check, so it shouldn't be loaded in vim.
+My vim/neovim config file. Trying to keep it as simple as possible, so should be portable between the two. For lua specific plugins or config, I have added behind an if check, so it shouldn't be loaded in vim.
 
 ## Usage:
 You should do `source <filename.vim>` for each of the configuration files you need.

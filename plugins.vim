@@ -54,7 +54,7 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'junegunn/fzf.vim'
   else
     " fall back to ctrlp if not using telescope
-    Plug 'kien/ctrlp.vim'
+    " Plug 'kien/ctrlp.vim'
   endif
 
   "Plug 'jremmen/vim-ripgrep'

@@ -5,7 +5,7 @@ if !exists("g:load_multicursor")
   let g:load_multicursor=1
 endif
 if !exists("g:load_anyjump")
-  let g:load_anyjump=1
+  let g:load_anyjump=0
 endif
 if !exists("g:load_fzf")
   let g:load_fzf=0
@@ -38,7 +38,7 @@ call plug#begin('~/.config/vim/plugged')
 
   Plug 'chrisbra/Colorizer'
 
-  Plug 'rhysd/vim-clang-format'
+  "Plug 'rhysd/vim-clang-format'
 
   if g:load_multicursor
     Plug 'mg979/vim-visual-multi'
@@ -57,8 +57,8 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'kien/ctrlp.vim'
   endif
 
-  Plug 'jremmen/vim-ripgrep'
-  Plug 'rking/ag.vim'
+  "Plug 'jremmen/vim-ripgrep'
+  "Plug 'rking/ag.vim'
 
   if g:load_treesitter
     " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -67,6 +67,7 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'nvim-treesitter/playground'
   end
 
+  " Language syntax definitions
   Plug 'neoclide/jsonc.vim'
   Plug 'ziglang/zig.vim'
   Plug 'plasticboy/vim-markdown'
@@ -76,12 +77,12 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'bfrg/vim-cpp-modern'
   Plug 'mxw/vim-jsx'
 
-  Plug 'sonph/onehalf', { 'rtp': 'vim' }
-  Plug 'morhetz/gruvbox'
-  Plug 'nanotech/jellybeans.vim'
-  Plug 'jacoborus/tender.vim'
-  Plug 'vim-scripts/wombat256.vim'
-  Plug 'tomasiser/vim-code-dark'
+  " Plug 'sonph/onehalf', { 'rtp': 'vim' }
+  " Plug 'morhetz/gruvbox'
+  " Plug 'nanotech/jellybeans.vim'
+  " Plug 'jacoborus/tender.vim'
+  " Plug 'vim-scripts/wombat256.vim'
+  " Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 let g:airline#extensions#branch#enabled = 0

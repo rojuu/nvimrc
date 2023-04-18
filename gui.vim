@@ -24,3 +24,7 @@ endif
 if exists(':GuiPopup')
     GuiPopup 0
 endif
+
+" disable neovide cursor animations
+let g:neovide_cursor_animation_length=0
+let g:neovide_cursor_trail_length=0

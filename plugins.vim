@@ -79,7 +79,7 @@ call plug#begin('~/.config/vim/plugged')
 
   " Plug 'sonph/onehalf', { 'rtp': 'vim' }
   " Plug 'morhetz/gruvbox'
-  " Plug 'nanotech/jellybeans.vim'
+  Plug 'nanotech/jellybeans.vim'
   " Plug 'jacoborus/tender.vim'
   " Plug 'vim-scripts/wombat256.vim'
   " Plug 'tomasiser/vim-code-dark'

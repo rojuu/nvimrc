@@ -103,11 +103,6 @@ function! TabMessage(cmd)
 endfunction
 command! -nargs=+ -complete=command TabMessage call TabMessage(<q-args>)
 
-if has('nvim')
-  " for some reason this breaks on vanilla vim?
-  nnoremap <silent><ESC> :nohls<CR>:cclose<CR>
-endif
-
 " nnoremap <silent>* *``
 
 nnoremap <silent><leader>h :set hlsearch!<CR>
@@ -129,4 +124,11 @@ noremap <silent><F9> 9gt
 noremap <silent><F10> 10gt
 noremap <silent><F11> 11gt
 noremap <silent><F12> 12gt
+
+" nvim specifics
+if has('nvim')
+  " for some reason this breaks on vanilla vim?
+  nnoremap <silent><ESC> :nohls<CR>:cclose<CR>
+  tnoremap <Esc> <C-\><C-n>
+endif
 

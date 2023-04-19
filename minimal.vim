@@ -48,6 +48,8 @@ set foldlevelstart=99
 
 nnoremap <silent><leader>x :%s/\(\s\)\+$//g<CR> ``
 
+nnoremap - :Explore<CR>
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>

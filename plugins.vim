@@ -25,7 +25,7 @@ call plug#begin('~/.config/vim/plugged')
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-vinegar'
+  "Plug 'tpope/vim-vinegar'
   Plug 'tpope/vim-commentary'
 
   Plug 'liuchengxu/vim-which-key'

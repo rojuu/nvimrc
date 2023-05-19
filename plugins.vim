@@ -2,7 +2,7 @@
 
 " options for some optional plugins
 if !exists("g:load_multicursor")
-  let g:load_multicursor=1
+  let g:load_multicursor=0
 endif
 if !exists("g:load_anyjump")
   let g:load_anyjump=0

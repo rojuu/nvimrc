@@ -1,33 +1,24 @@
 # init.vim
-My vim/neovim config file. Trying to keep it as simple as possible, so should be portable between the two. For lua specific plugins or config, I have added behind an if check, so it shouldn't be loaded in vim.
+My vim/neovim config file. Trying to keep it as simple as possible, so should be fairly portable between the two. Any nvim/lua specific plugins or config have been setup to not run in regular vim.
 
-## Usage:
-You should do `source <filename.vim>` for each of the configuration files you need.
+## Usage (nvim)
+Firstly clone this repo into `~/.config/nvim` (or `C:/Users/<username>/AppData/Local/nvim` on windows).
+
+There is no default init.vim file present, you should instead add one and `source <filename.vim>` for each of the configuration files you want to load.
 minimal.vim: Only most barebones config, no plugins or gui
-plugins.vim: load this to add some useful plugins, has some optional arguments (see top of file)
-gui.vim: load this if you are in gui mode (e.g. in ~/.gvimrc)
+plugins.vim: Plugins and their configs, also loads lua config
+gui.vim: Gui specific config (load from `ginit.vim` for best experience)
 
 Example init.vim file:
 ```
-" See more config values at the top of plugins.vim
-let g:load_treesitter=1
 source ~/.config/nvim/minimal.vim
 source ~/.config/nvim/plugins.vim
-colorscheme jellybeans
+colo jellybeans
 ```
-
-You can also clone this repo directly to e.g. `~/.config/nvim` or wherever your vim loads config files from.
-
-If you clone in some other directory and want to use the extended C syntax you can use the commands below to symlink the syntax files into vim's syntax search path. Do note however that the syntax rule assumes that custom structs are in PascalCase or have \_t postfix in them, so if your code follows some other code guidelines, this might have weird results.
-```
-# For vim
-ln -s <path_to_this_repo>/after/syntax/c.vim ~/.vim/after/syntax/c.vim
-# For nvim
-ln -s <path_to_this_repo>/after/syntax/c.vim ~/.config/nvim/after/syntax/c.vim
-```
-If you are using treesitter, the syntax stuff is pretty useless though.
 
 ### Installing plugged vim:
+
+The config uses the plugged vim plugin manager (if you load the plugins.vim file), so you need to have it installed. Below are instructions to install it for each given setup.
 
 #### Vim
 ##### Unix

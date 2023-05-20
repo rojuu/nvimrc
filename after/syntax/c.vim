@@ -1,7 +1,7 @@
-syntax keyword CustomPrimitives u8 u16 u32 u64  s8 s16 s32 s64  f32 f64  b32  usz uptr  sptr
+syntax keyword CustomPrimitives u8 u16 u32 u64  s8 s16 s32 s64  f32 f64  b32  usz uptr  sptr  uwrd swrd
 highlight link CustomPrimitives Type
 
-syntax keyword CustomStorageClass internal global
+syntax keyword CustomStorageClass internal global global_variable local_persist
 highlight link CustomStorageClass cStorageClass
 
 syntax match CustomStruct "\<[A-Z]\+[A-Z_]*[a-z]\+[A-Za-z0-9_]*\>"

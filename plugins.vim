@@ -17,8 +17,8 @@ call plug#begin('~/.config/vim/plugged')
 
   if has('nvim')
     Plug 'stevearc/oil.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+    "Plug 'nvim-lua/plenary.nvim'
+    "Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
   endif
 
   " Language syntax definitions
@@ -54,6 +54,9 @@ nnoremap <silent><leader>so :Alternate<CR>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+augroup filetypedetect
+    au BufRead,BufNewFile *.json set filetype=jsonc
+augroup END
 
 if has('nvim')
   nnoremap <leader>ff <cmd>Telescope find_files<cr>

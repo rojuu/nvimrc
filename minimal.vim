@@ -39,10 +39,6 @@ set showbreak=\\
 " would be cool to add '↩' at the end of the line as well
 " issue for that in neovim: https://github.com/neovim/neovim/issues/4762
 
-augroup filetypedetect
-    au BufRead,BufNewFile *.json set filetype=jsonc
-augroup END
-
 set foldmethod=indent
 set foldlevelstart=99
 
@@ -59,10 +55,6 @@ nnoremap <silent>j gj
 nnoremap <silent>k gk
 vnoremap <silent>j gj
 vnoremap <silent>k gk
-
-" no need to rebind esc to caps as this is a more portable solution
-" to exit insert mode easily
-inoremap jj <ESC>
 
 nnoremap <leader>v <C-W><C-V><C-W><C-L>
 nnoremap <leader>q <C-W><C-Q>
@@ -87,21 +79,6 @@ nnoremap <leader>tc :tabclose<CR>
 nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>tl :tabnext<CR>
 nnoremap <leader>th :tabprevious<CR>
-
-function! TabMessage(cmd)
-  redir => message
-  silent execute a:cmd
-  redir END
-  if empty(message)
-    echoerr "no output"
-  else
-    " use "new" instead of "tabnew" below if you prefer split windows instead of tabs
-    tabnew
-    setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
-    silent put=message
-  endif
-endfunction
-command! -nargs=+ -complete=command TabMessage call TabMessage(<q-args>)
 
 " nnoremap <silent>* *``
 

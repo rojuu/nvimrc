@@ -17,8 +17,8 @@ call plug#begin('~/.config/vim/plugged')
 
   if has('nvim')
     Plug 'stevearc/oil.nvim'
-    "Plug 'nvim-lua/plenary.nvim'
-    "Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
   endif
 
   " Language syntax definitions

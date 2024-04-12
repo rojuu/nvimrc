@@ -11,15 +11,6 @@ set backspace=indent,eol,start
 set smartcase
 set ignorecase
 
-set hidden
-
-set belloff=all
-
-filetype plugin on
-syntax on
-
-" reloading buffer when changes done
-set autoread
 " Reload when focus regained (incase someone from outside changed the file)
 " In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime
@@ -32,15 +23,11 @@ set listchars=tab:>\ ,trail:-,nbsp:+
 " set listchars=tab:�\ ,trail:�,nbsp:+
 " set listchars=tab:»\ ,space:·,trail:·,nbsp:+
 " set listchars=tab:>\ ,nbsp:+
-" set list
 set list
 set showbreak=\\
 " set showbreak=↪
 " would be cool to add '↩' at the end of the line as well
 " issue for that in neovim: https://github.com/neovim/neovim/issues/4762
-
-set foldmethod=indent
-set foldlevelstart=99
 
 nnoremap <silent><leader>x :%s/\(\s\)\+$//g<CR> ``
 

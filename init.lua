@@ -4,6 +4,9 @@ vim.g.have_nerd_font = false
 
 vim.opt.mouse = ""
 
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevelstart = 99
+
 vim.opt.showmode = false
 vim.opt.number = false
 

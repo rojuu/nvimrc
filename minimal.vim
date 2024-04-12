@@ -11,6 +11,9 @@ set backspace=indent,eol,start
 set smartcase
 set ignorecase
 
+set foldmethod=indent
+set foldlevelstart=99
+
 " Reload when focus regained (incase someone from outside changed the file)
 " In theory FocusGained only exists for gui
 au FocusGained,BufEnter * checktime

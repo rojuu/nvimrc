@@ -90,6 +90,9 @@ vim.keymap.set("n", "<leader>yf", ':let @+ = expand("%:p", { silent = true })<CR
 -- yank current file relative path to system clipboard
 vim.keymap.set("n", "<leader>yr", ':let @+ = expand("%", { silent = true })<CR>')
 
+vim.keymap.set("n", "å", "{")
+vim.keymap.set("n", "ö", "}")
+
 vim.keymap.set("n", "<F1>", "1gt", { silent = true })
 vim.keymap.set("n", "<F2>", "2gt", { silent = true })
 vim.keymap.set("n", "<F3>", "3gt", { silent = true })

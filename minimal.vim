@@ -75,32 +75,10 @@ nnoremap <silent><leader>w :w<CR>
 " C-] is quite hard to use on nordic kb layout, so rebind that
 nnoremap <leader>tt <C-]>
 
-nnoremap <leader>tc :tabclose<CR>
-nnoremap <leader>tn :tabnew<CR>
-nnoremap <leader>tl :tabnext<CR>
-nnoremap <leader>th :tabprevious<CR>
-
-" nnoremap <silent>* *``
-
-nnoremap <silent><leader>h :set hlsearch!<CR>
-
 " yank current file full path to system clipboard
 noremap <silent><leader>yf :let @+ = expand("%:p")<CR>
 " yank current file relative path to system clipboard
 nnoremap <silent><leader>yr :let @+ = expand("%")<CR>
-
-noremap <silent><F1> 1gt
-noremap <silent><F2> 2gt
-noremap <silent><F3> 3gt
-noremap <silent><F4> 4gt
-noremap <silent><F5> 5gt
-noremap <silent><F6> 6gt
-noremap <silent><F7> 7gt
-noremap <silent><F8> 8gt
-noremap <silent><F9> 9gt
-noremap <silent><F10> 10gt
-noremap <silent><F11> 11gt
-noremap <silent><F12> 12gt
 
 " nvim specifics
 if has('nvim')

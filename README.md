@@ -11,5 +11,5 @@ If using from WSL on windows, it's useful to install [win32yank](https://github.
 ```
 - OK Clipboard tool found: win32yank
 ```
-This will enable copy/paste to and from vim with "* or "+ registers in WSL environment.
+This will enable copy/paste to and from vim with `"*` or `"+` registers in WSL environment.
 

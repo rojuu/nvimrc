@@ -3,7 +3,7 @@ My neovim config file.
 
 ## Usage
 
-Just clone the repo in your nvim config directory, e.g. `~/.config/nvim` or `$USERPROFILE\AppData\Local\nvim`. lazy.nvim will automatically install itself and all plugins when first starting up nvim.
+Just clone the repo in your nvim config directory, e.g. `~/.config/nvim` or `$HOME\AppData\Local\nvim`. lazy.nvim will automatically install itself and all plugins when first starting up nvim.
 
 ### Windows/WSL
 

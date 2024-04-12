@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.have_nerd_font = false
 
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevelstart = 99

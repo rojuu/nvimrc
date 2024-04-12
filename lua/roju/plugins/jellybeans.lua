@@ -3,14 +3,13 @@ return {
   "nanotech/jellybeans.vim",
   priority = 1000, -- Make sure to load this before all the other start plugins.
   init = function()
-    local bg = {}
-    -- bg["guibg"] = "202020"
-    -- bg["ctermbg"] = "202020"
-    -- bg["256ctermbg"] = "202020"
-    bg["guibg"] = "202020"
-    bg["ctermbg"] = "none"
-    bg["256ctermbg"] = "none"
-    vim.g.jellybeans_overrides = { background = bg }
+    vim.g.jellybeans_overrides = {
+      background = {
+        ["guibg"] = "202020",
+        ["ctermbg"] = "none",
+        ["256ctermbg"] = "none",
+      },
+    }
 
     vim.cmd.colorscheme("jellybeans")
 

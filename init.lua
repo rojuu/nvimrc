@@ -93,19 +93,8 @@ vim.keymap.set("n", "<leader>yr", ':let @+ = expand("%", { silent = true })<CR>'
 
 vim.keymap.set("n", "å", "{")
 vim.keymap.set("n", "ö", "}")
-
-vim.keymap.set("n", "<F1>", "1gt", { silent = true })
-vim.keymap.set("n", "<F2>", "2gt", { silent = true })
-vim.keymap.set("n", "<F3>", "3gt", { silent = true })
-vim.keymap.set("n", "<F4>", "4gt", { silent = true })
-vim.keymap.set("n", "<F5>", "5gt", { silent = true })
-vim.keymap.set("n", "<F6>", "6gt", { silent = true })
-vim.keymap.set("n", "<F7>", "7gt", { silent = true })
-vim.keymap.set("n", "<F8>", "8gt", { silent = true })
-vim.keymap.set("n", "<F9>", "9gt", { silent = true })
-vim.keymap.set("n", "<F10>", "10gt", { silent = true })
-vim.keymap.set("n", "<F11>", "11gt", { silent = true })
-vim.keymap.set("n", "<F12>", "12gt", { silent = true })
+vim.keymap.set("x", "å", "{")
+vim.keymap.set("x", "ö", "}")
 
 -- Highlight when yanking (copying) text
 --  See `:help vim.highlight.on_yank()`

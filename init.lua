@@ -120,6 +120,7 @@ require("lazy").setup({
   "tpope/vim-fugitive",
   -- "gc" to comment visual regions/lines
   { "numToStr/Comment.nvim", opts = {} },
+
   {
     "folke/todo-comments.nvim",
     event = "VimEnter",

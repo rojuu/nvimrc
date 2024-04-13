@@ -127,6 +127,10 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = { signs = false },
   },
+
+  -- shows function signature while typing
+  "hrsh7th/cmp-nvim-lsp-signature-help",
+
   -- The import below can automatically adds plugins from e.g. `lua/custom/plugins/*.lua`
   { import = "roju.plugins" },
 }, {

@@ -31,7 +31,10 @@ vim.opt.splitbelow = false
 --  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-vim.opt.showbreak = "\\"
+-- vim.opt.showbreak = "\\"
+
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 vim.opt.inccommand = "split"
 

@@ -81,11 +81,6 @@ vim.keymap.set("v", "<S-TAB>", "<gv", { silent = true })
 
 vim.keymap.set("n", "<leader>tt", "<C-]>")
 
-vim.keymap.set("n", "<leader>tc", ":tabclose<CR>")
-vim.keymap.set("n", "<leader>tn", ":tabnew<CR>")
-vim.keymap.set("n", "<leader>tl", ":tabnext<CR>")
-vim.keymap.set("n", "<leader>th", ":tabprevious<CR>")
-
 -- yank current file full path to system clipboard
 vim.keymap.set("n", "<leader>yf", ':let @+ = expand("%:p", { silent = true })<CR>')
 -- yank current file relative path to system clipboard

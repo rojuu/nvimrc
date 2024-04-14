@@ -79,8 +79,6 @@ vim.keymap.set("v", ">", ">gv", { silent = true })
 vim.keymap.set("v", "<TAB>", ">gv", { silent = true })
 vim.keymap.set("v", "<S-TAB>", "<gv", { silent = true })
 
-vim.keymap.set("n", "<leader>w", ":w<CR>", { silent = true })
-
 vim.keymap.set("n", "<leader>tt", "<C-]>")
 
 vim.keymap.set("n", "<leader>tc", ":tabclose<CR>")

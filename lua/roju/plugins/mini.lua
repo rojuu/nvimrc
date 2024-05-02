@@ -27,6 +27,17 @@ return { -- Collection of various small independent plugins/modules
       return "%2l:%-2v"
     end
 
+    --vim.cmd.colorscheme("randomhue")
+    require('mini.hues').setup({
+      background = '#fafafa',
+      foreground = '#4a4a4a',
+      plugins = {
+        default = false,
+        ['echasnovski/mini.nvim'] = true,
+      },
+    })
+
+
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
   end,

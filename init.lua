@@ -47,11 +47,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", "<leader>x", ":%s/\\(\\s\\)\\+$//g<CR> ``", { silent = true })
 
-vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
-vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
@@ -121,9 +116,6 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = { signs = false },
   },
-
-  -- shows function signature while typing
-  "hrsh7th/cmp-nvim-lsp-signature-help",
 
   -- The import below can automatically adds plugins from e.g. `lua/custom/plugins/*.lua`
   { import = "roju.plugins" },

@@ -16,7 +16,7 @@ vim.opt.number = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.signcolumn = "yes"
+--vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
@@ -33,8 +33,8 @@ vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 -- vim.opt.showbreak = "\\"
 
-vim.opt.number = true
-vim.opt.relativenumber = true
+--vim.opt.number = true
+--vim.opt.relativenumber = true
 
 vim.opt.inccommand = "split"
 

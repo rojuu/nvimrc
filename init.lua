@@ -144,4 +144,3 @@ require("lazy").setup({
   },
 })
 
-vim.cmd.colorscheme("roju")

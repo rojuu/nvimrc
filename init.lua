@@ -85,6 +85,9 @@ vim.keymap.set("n", "ö", "}")
 vim.keymap.set("x", "å", "{")
 vim.keymap.set("x", "ö", "}")
 
+-- C-S to save
+vim.keymap.set("n", "<C-S>", ":w<CR>")
+
 -- Highlight when yanking (copying) text
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd("TextYankPost", {

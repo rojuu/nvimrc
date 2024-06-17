@@ -144,12 +144,4 @@ require("lazy").setup({
   },
 })
 
-function clearbg()
-  vim.cmd.hi("Normal guibg=NONE ctermbg=NONE")
-end
-
---vim.cmd.colorscheme("retrobox")
---vim.cmd.colorscheme("default")
-vim.cmd.colorscheme("onehalflight")
-clearbg()
-
+vim.cmd.colorscheme("catppuccin")

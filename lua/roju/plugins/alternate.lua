@@ -1,6 +1,6 @@
 return {
   "ton/vim-alternate",
   config = function()
-    vim.keymap.set("n", "<leader>so", ":Alternate<CR>")
+    vim.keymap.set("n", "<leader>oo", ":Alternate<CR>")
   end,
 }

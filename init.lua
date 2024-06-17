@@ -16,7 +16,7 @@ vim.opt.number = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
---vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "no"
 
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
@@ -65,6 +65,7 @@ vim.keymap.set("v", "j", "gj", { silent = true })
 vim.keymap.set("v", "k", "gk", { silent = true })
 
 vim.keymap.set("n", "<leader>v", "<C-W><C-V><C-W><C-L>")
+vim.keymap.set("n", "<leader>s", "<C-W><C-S>")
 vim.keymap.set("n", "<leader>q", "<C-W><C-Q>")
 
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>", { silent = true })

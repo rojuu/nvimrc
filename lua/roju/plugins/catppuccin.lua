@@ -11,9 +11,9 @@ return {
       no_underline = true, -- Force no underline
       color_overrides = {
         mocha = {
-          base = "#000000", -- default: #1E1E2E
-          mantle = "#010101", -- default #181825
-          crust = "#020202", -- default: #11111B
+          base = "#1c1917", -- default: #1E1E2E
+          mantle = "#171717", -- default #181825
+          crust = "#0c0a09", -- default: #11111B
         },
       },
       default_integrations = true,

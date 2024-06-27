@@ -104,6 +104,10 @@ vim.keymap.set("x", "ö", "}")
 -- C-S to save
 vim.keymap.set("n", "<C-S>", ":w<CR>")
 
+function ClearBg()
+  vim.cmd.hi("Normal guibg=NONE ctermbg=NONE")
+end
+
 -- Highlight when yanking (copying) text
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd("TextYankPost", {

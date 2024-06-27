@@ -74,6 +74,7 @@ return { -- LSP Configuration & Plugins
       tsserver = {},
       tailwindcss = {},
       rust_analyzer = {},
+      ols = {},
 
       lua_ls = {
         -- cmd = {...},
@@ -90,6 +91,10 @@ return { -- LSP Configuration & Plugins
         },
       },
     }
+
+    for k, v in pairs(servers) do
+      require("lspconfig")[k].setup(v)
+    end
 
     -- Ensure the servers and tools above are installed
     --  To check the current status of installed tools and/or manually install

@@ -47,18 +47,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", "<leader>x", ":%s/\\(\\s\\)\\+$//g<CR> ``", { silent = true })
 
---- @param diagnostic vim.Diagnostic?
-local function maybe_jump_to_diagnostic(diagnostic)
-  if diagnostic then
-    vim.diagnostic.jump({ diagnostic = diagnostic })
-  end
-end
-vim.keymap.set("n", "<leader>dp", function()
-  maybe_jump_to_diagnostic(vim.diagnostic.get_prev())
-end, { desc = "Go to previous [D]iagnostic message" })
-vim.keymap.set("n", "<leader>dn", function()
-  maybe_jump_to_diagnostic(vim.diagnostic.get_next())
-end, { desc = "Go to next [D]iagnostic message" })
+vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
+vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 

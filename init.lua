@@ -120,18 +120,22 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   "tpope/vim-sleuth",
   "tpope/vim-fugitive",
+  "tpope/vim-surround",
+
+  "nanotech/jellybeans.vim",
+
   -- "gc" to comment visual regions/lines
   { "numToStr/Comment.nvim", opts = {} },
 
-  {
-    "folke/todo-comments.nvim",
-    event = "VimEnter",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = { signs = false },
-  },
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   event = "VimEnter",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   opts = { signs = false },
+  -- },
 
   -- shows function signature while typing
-  "hrsh7th/cmp-nvim-lsp-signature-help",
+  -- "hrsh7th/cmp-nvim-lsp-signature-help",
 
   -- The import below can automatically adds plugins from e.g. `lua/custom/plugins/*.lua`
   { import = "roju.plugins" },
@@ -157,4 +161,14 @@ require("lazy").setup({
   },
 })
 
-vim.cmd.colorscheme("catppuccin")
+vim.g.jellybeans_overrides = {
+  background = {
+    ["ctermbg"] = "none",
+    ["256ctermbg"] = "none",
+    ["guibg"] = "none",
+  }
+}
+
+vim.cmd.colorscheme("jellybeans")
+--ClearBg()
+

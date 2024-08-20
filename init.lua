@@ -111,6 +111,41 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+function file_exists(filename)
+  return vim.fn.filereadable(filename) == 1
+end
+
+vim.opt.errorformat:append("%f(%l:%c) %m") -- odin error format
+
+function set_makeprg()
+  if (vim.fn.has("win32")) then
+    if (file_exists("build.bat")) then
+      vim.opt.makeprg = ".\\build.bat"
+    else
+      vim.opt.makeprg = 'echo "No build system found"'
+    end
+  else
+    if (file_exists("build.sh")) then
+      vim.opt.makeprg = "./build.sh"
+    elseif (file_exists("Makefile")) then
+      vim.opt.makeprg = "make"
+    else
+      vim.opt.makeprg = 'echo "No build system found"'
+    end
+  end
+end
+
+vim.api.nvim_create_autocmd("DirChanged", {
+  desc = "Set makeprg based on current dir contents",
+  pattern = { "global" },
+  group = vim.api.nvim_create_augroup("makeprg-dir-based-setter", { clear = true }),
+  callback = function()
+    set_makeprg()
+  end,
+})
+
+set_makeprg()
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

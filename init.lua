@@ -122,7 +122,9 @@ require("lazy").setup({
   "tpope/vim-fugitive",
   "tpope/vim-surround",
 
-  { "metalelf0/jellybeans-nvim", dependencies = { "rktjmp/lush.nvim" } },
+  -- { "savq/melange-nvim" },
+  -- { "ramojus/mellifluous.nvim" },
+  { "sainnhe/everforest" },
 
   -- "gc" to comment visual regions/lines
   { "numToStr/Comment.nvim", opts = {} },
@@ -161,14 +163,6 @@ require("lazy").setup({
   },
 })
 
--- vim.g.jellybeans_overrides = {
---   background = {
---     ["ctermbg"] = "none",
---     ["256ctermbg"] = "none",
---     ["guibg"] = "none",
---   }
--- }
-
-vim.cmd.colorscheme("jellybeans-nvim")
+vim.cmd.colorscheme("everforest")
 ClearBg()
 

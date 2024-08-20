@@ -70,8 +70,11 @@ vim.keymap.set("n", "<leader>q", "<C-W><C-Q>")
 
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>cp", ":cprev<CR>", { silent = true })
-vim.keymap.set("n", "<leader>cq", ":cclose<CR>", { silent = true })
+vim.keymap.set("n", "<leader>cc", ":cclose<CR>", { silent = true })
 vim.keymap.set("n", "<leader>cw", ":cwindow<CR>", { silent = true })
+vim.keymap.set("n", "<leader>co", ":copen<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>m", ":make<CR><ESC>:copen<CR><C-W><C-P>", { silent = true })
 
 vim.keymap.set("v", "<", "<gv", { silent = true })
 vim.keymap.set("v", ">", ">gv", { silent = true })

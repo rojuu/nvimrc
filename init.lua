@@ -160,8 +160,6 @@ require("lazy").setup({
   "tpope/vim-fugitive",
   "tpope/vim-surround",
 
-  { "rojuu/jellybeans-nvim", dependencies = { "rktjmp/lush.nvim", }, },
-
   -- "gc" to comment visual regions/lines
   { "numToStr/Comment.nvim", opts = {} },
 
@@ -199,6 +197,6 @@ require("lazy").setup({
   },
 })
 
-vim.cmd.colorscheme("jellybeans-nvim")
+vim.cmd.colorscheme("habamax")
 ClearBg()
 

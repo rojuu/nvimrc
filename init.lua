@@ -51,6 +51,15 @@ vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { desc = "Go to prev
 vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<leader>dt", function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { desc = "[T]oggle Diagnostics" })
+vim.keymap.set("n", "<leader>de", function()
+  vim.diagnostic.enable(true)
+end, { desc = "[E]nable diagnostics" })
+vim.keymap.set("n", "<leader>dd", function()
+  vim.diagnostic.enable(false)
+end, { desc = "[D]isable diagnostics" })
 
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
@@ -118,16 +127,16 @@ end
 vim.opt.errorformat:append("%f(%l:%c) %m") -- odin error format
 
 function set_makeprg()
-  if (vim.fn.has("win32")) then
-    if (file_exists("build.bat")) then
+  if vim.fn.has("win32") then
+    if file_exists("build.bat") then
       vim.opt.makeprg = ".\\build.bat"
     else
       vim.opt.makeprg = 'echo "No build system found"'
     end
   else
-    if (file_exists("build.sh")) then
+    if file_exists("build.sh") then
       vim.opt.makeprg = "./build.sh"
-    elseif (file_exists("Makefile")) then
+    elseif file_exists("Makefile") then
       vim.opt.makeprg = "make"
     else
       vim.opt.makeprg = 'echo "No build system found"'
@@ -159,6 +168,8 @@ require("lazy").setup({
   "tpope/vim-sleuth",
   "tpope/vim-fugitive",
   "tpope/vim-surround",
+
+  "hrsh7th/cmp-nvim-lsp-signature-help",
 
   -- "gc" to comment visual regions/lines
   { "numToStr/Comment.nvim", opts = {} },
@@ -199,4 +210,3 @@ require("lazy").setup({
 
 vim.cmd.colorscheme("habamax")
 ClearBg()
-

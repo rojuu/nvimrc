@@ -85,9 +85,9 @@ vim.keymap.set("v", "<S-TAB>", "<gv", { silent = true })
 vim.keymap.set("n", "<leader>tt", "<C-]>")
 
 -- yank current file full path to system clipboard
-vim.keymap.set("n", "<leader>yf", ':let @+ = expand("%:p", { silent = true })<CR>')
+vim.keymap.set("n", "<leader>yf", ':let @+ = expand("%:p")<CR>', { silent = true })
 -- yank current file relative path to system clipboard
-vim.keymap.set("n", "<leader>yr", ':let @+ = expand("%", { silent = true })<CR>')
+vim.keymap.set("n", "<leader>yr", ':let @+ = expand("%")<CR>', { silent = true })
 
 vim.keymap.set("n", "å", "{")
 vim.keymap.set("n", "ö", "}")

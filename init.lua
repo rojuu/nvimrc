@@ -171,6 +171,8 @@ require("lazy").setup({
 
   "hrsh7th/cmp-nvim-lsp-signature-help",
 
+  { "rojuu/jellybeans-nvim", dependencies = { "rktjmp/lush.nvim" } },
+
   -- "gc" to comment visual regions/lines
   { "numToStr/Comment.nvim", opts = {} },
 
@@ -208,5 +210,5 @@ require("lazy").setup({
   },
 })
 
-vim.cmd.colorscheme("habamax")
-ClearBg()
+vim.cmd.colorscheme("kanagawa")
+--ClearBg()

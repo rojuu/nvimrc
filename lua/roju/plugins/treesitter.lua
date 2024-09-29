@@ -1,7 +1,6 @@
 return { -- Highlight, edit, and navigate code
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
-  lazy = true,
   event = "VeryLazy",
   opts = {
     ensure_installed = { "bash", "c", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },

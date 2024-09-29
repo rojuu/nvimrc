@@ -1,6 +1,5 @@
 return { -- Autoformat
   "stevearc/conform.nvim",
-  lazy = true,
   event = "VeryLazy",
   keys = {
     {

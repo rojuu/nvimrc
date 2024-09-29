@@ -52,6 +52,30 @@ return { -- LSP Configuration & Plugins
       end,
     })
 
+    -- vim.lsp.handlers["textdocument/publishdiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    --
+    --   signs = {
+    --     severity = { max = vim.diagnostic.severity.WARN },
+    --   },
+    --   virtual_text = {
+    --     severity = { max = vim.diagnostic.severity.WARN },
+    --   },
+    --
+    --   -- signs = {
+    --   --   severity_limit = "warning",
+    --   -- },
+    --   -- virtual_text = {
+    --   --   severity_limit = "warning",
+    --   -- },
+    -- })
+
+    vim.diagnostic.config({
+      -- disable virtual_text for e.g. HINT messages (can be still viewed with vim.diagnostic.goto_next)
+      virtual_text = {
+        severity = { min = vim.diagnostic.severity.WARN },
+      },
+    })
+
     -- LSP servers and clients are able to communicate to each other what features they support.
     --  By default, Neovim doesn't support everything that is in the LSP specification.
     --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.

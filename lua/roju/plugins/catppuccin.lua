@@ -44,9 +44,14 @@ return {
         surface2 = "#504844",
         surface1 = "#3a3634",
         surface0 = "#252525",
-        base = "#151515",
-        mantle = "#0e0e0e",
-        crust = "#080808",
+
+        base = "#000000",
+        mantle = "#010101",
+        crust = "#020202",
+
+        -- base = "#151515",
+        -- mantle = "#0e0e0e",
+        -- crust = "#080808",
       },
     },
     integrations = {

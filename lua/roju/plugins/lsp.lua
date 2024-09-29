@@ -90,7 +90,7 @@ return { -- LSP Configuration & Plugins
     --  settings (table): Override the default settings passed when initializing the server.
     local servers = {
       gopls = {},
-      tsserver = {},
+      ts_ls = {},
       tailwindcss = {},
       rust_analyzer = {},
       ols = {},
@@ -126,7 +126,7 @@ return { -- LSP Configuration & Plugins
     -- You can add other tools here that you want Mason to install
     -- for you, so that they are available from within Neovim.
     local ensure_installed = {
-      "tsserver",
+      "ts_ls",
       "tailwindcss",
 
       -- formatters
@@ -141,7 +141,7 @@ return { -- LSP Configuration & Plugins
           local server = servers[server_name] or {}
           -- This handles overriding only values explicitly passed
           -- by the server configuration above. Useful when disabling
-          -- certain features of an LSP (for example, turning off formatting for tsserver)
+          -- certain features of an LSP (for example, turning off formatting for ts_ls)
           server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
           require("lspconfig")[server_name].setup(server)
         end,
